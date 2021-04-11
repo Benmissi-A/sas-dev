@@ -22,7 +22,7 @@ const Context = () => {
 
   return (
     <>
-        <button className="btn btn-info" onClick={handleClick}>{isLogged ? 'Login' : 'Logout'}</button>
+        <button className="btn btn-info" onClick={handleClick}>{isLogged ? 'Logout' : 'Login'}</button>
       <Board crypto={crypto} isLogged={isLogged} />
     </>
   )
