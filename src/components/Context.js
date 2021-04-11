@@ -6,8 +6,10 @@ const Context = () => {
 
   const [crypto, setCrypto] = useState({ data: [] })
   const [isLogged, setIsLogged] = useState(true)
+  const handleClick = () => {
+    setIsLogged(!isLogged)
+  }
 
-  //setIsLogged(true)
 
   useEffect(async () => {
     const result = await axios(
@@ -20,6 +22,7 @@ const Context = () => {
 
   return (
     <>
+        <button onClick={handleClick}>{isLogged ? 'Login' : 'Logout'}</button>
       <Board crypto={crypto} isLogged={isLogged} />
     </>
   )
