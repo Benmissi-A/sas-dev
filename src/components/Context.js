@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import PublicBoard from "./PublicBoard"
-import MemberBoard from "./MemberBoard"
+import Board from "./Board"
 
 const Context = () => {
 
   const [crypto, setCrypto] = useState({ data: [] })
-  const [isLogged, setIsLogged] = useState(false)
+  const [isLogged, setIsLogged] = useState(true)
 
-  //setIsLogged(!isLogged)
+  //setIsLogged(true)
 
   useEffect(async () => {
     const result = await axios(
@@ -21,7 +20,7 @@ const Context = () => {
 
   return (
     <>
-      {isLogged ? <MemberBoard crypto={crypto} /> : <PublicBoard crypto={crypto} />}
+      <Board crypto={crypto} isLogged={isLogged} />
     </>
   )
 }
