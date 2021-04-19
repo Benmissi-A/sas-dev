@@ -1,5 +1,7 @@
+import Button from './Button'
 const Crypto = (props) => {
   const {crypto} = props
+  
   return(
     <div key={crypto.id} className="border border-secondary border rounded col-6 m-auto mb-3">
       <h2>{`${crypto.name} - ${crypto.name} Rank : ${crypto.rank}`}</h2>
@@ -17,6 +19,7 @@ const Crypto = (props) => {
       <p>{`Csupply: ${crypto.csupply} USD`}</p>
       <p>{`Tsupply: ${crypto.tsupply} USD`}</p>
       <p>{`Msupply: ${crypto.msupply} USD`}</p>
+      <Button value={'Buy'} btnStyle={ "btn btn-primary my-3"}/>
     </div>
   )
 }
