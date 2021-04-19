@@ -1,15 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect } from "react";
 import axios from "axios";
 import Board from "./Board"
 
-const Context = () => {
+const Context = (props) => {
+  const {isLogged} = props
 
   const [crypto, setCrypto] = useState({ data: [] })
-  const [isLogged, setIsLogged] = useState(true)
-  const handleClick = () => {
-    setIsLogged(!isLogged)
-  }
-
+ 
 
   useEffect(async () => {
     const result = await axios(
@@ -18,11 +15,8 @@ const Context = () => {
     setCrypto(result.data)
   })
 
-  //console.log(crypto)
-
   return (
     <>
-        <button className="btn btn-info" onClick={handleClick}>{isLogged ? 'Logout' : 'Login'}</button>
       <Board crypto={crypto} isLogged={isLogged} />
     </>
   )
