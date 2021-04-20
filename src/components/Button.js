@@ -1,7 +1,7 @@
 const Button = (props) => {
-   const {value , btnStyle} = props
+   const {value , btnStyle , type , handleClick} = props
   return(
-    <button type="button" className={btnStyle}>{value}</button>
+    <button type={type} className={btnStyle} onClick={handleClick}>{value}</button>
   )
 }
 export default Button
