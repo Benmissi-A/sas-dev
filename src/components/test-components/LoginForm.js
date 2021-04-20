@@ -11,7 +11,7 @@ const LoginForm = () => {
         <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
         <input type="password" className="form-control" key="exampleInputPassword1"></input>
       </div>
-      <Button type ={'submit'} value={'Buy'} btnStyle={ "btn btn-primary my-3"}/>
+      <Button type ={'submit'} value={'Buy'} btnStyle={"btn btn-primary my-3"}/>
     </form>    
     )
 }
