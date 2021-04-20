@@ -19,7 +19,7 @@ const Crypto = (props) => {
       <p>{`Csupply: ${crypto.csupply} USD`}</p>
       <p>{`Tsupply: ${crypto.tsupply} USD`}</p>
       <p>{`Msupply: ${crypto.msupply} USD`}</p>
-      <Button value={'Buy'} btnStyle={ "btn btn-primary my-3"}/>
+      <Button type={"button"} value={'Buy'} btnStyle={ "btn btn-primary my-3"} handleClick={''}/>
     </div>
   )
 }
