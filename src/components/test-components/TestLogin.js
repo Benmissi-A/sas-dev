@@ -1,7 +1,8 @@
 // component temporaire de test avec utilisateurs
-import Button from '../Button'
+//import Button from '../Button'
+import ModalSign from '../modals/ModalSign'
 const TestLogin = (props) => {
-const {isLogged , setIsLogged} = props
+const {isLogged , setIsLogged , openLogin , setOpenLogin} = props
   const handleClick = (e) => {
     e.preventDefault()
     setIsLogged(!isLogged)
@@ -12,6 +13,8 @@ const {isLogged , setIsLogged} = props
     <>
          
         <button className="btn btn-info" onClick={handleClick}>{isLogged ? 'Logout' : 'Login'}</button>
+        <ModalSign openLogin={openLogin} setOpenLogin={setOpenLogin} isLogged={isLogged} setIsLogged={setIsLogged}/>
+
     </>
   )
 }
