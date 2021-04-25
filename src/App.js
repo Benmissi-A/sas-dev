@@ -8,6 +8,7 @@ function App() {
     const [isLogged, setIsLogged] = useState(false)
     const [openLogin , setOpenLogin] = useState(false)
     const [openCrypto , setOpenCrypto] = useState(false)
+    
       
    
   return (
