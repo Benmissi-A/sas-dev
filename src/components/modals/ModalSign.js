@@ -11,7 +11,7 @@ const ModalSign = (props) => {
   if(openLogin){
     return(
       <div className="modal d-block bg-white ">
-        <h2 className="text-dark">Modal Open </h2>
+        <h2 className="text-dark">ModalSign Open </h2>
         <button className="btn btn-info" onClick={handleClick}>Sign up</button>
       </div>
     )
