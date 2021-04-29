@@ -1,10 +1,13 @@
+import { users } from '../../users'
+
 const ModalSign = (props) => {
-  const {isLogged , setIsLogged , openLogin , setOpenLogin} = props
+  const {isLogged , setIsLogged , openLogin , setOpenLogin , setUser} = props
   
 
   const handleClick = (e) => {
     e.preventDefault()
     setIsLogged(!isLogged)
+    setUser(users[0])
     setOpenLogin(false)
   }
 
