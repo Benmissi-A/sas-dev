@@ -1,18 +1,19 @@
 import { buy, sell } from '../../utils'
 
 const ModalCrypto = (props) => {
-  const { filter, openCrypto, setOpenCrypto } = props
+  const { filter, openCrypto, setOpenCrypto ,user} = props
 
   const handleClick = (e) => {
     e.preventDefault()
     setOpenCrypto(false)
   }
-
-  const handleBuy = (user) => {
+  const handleBuy= () =>{
     buy(user)
   }
+    const handleSell= () =>{
+    sell(user)
+  }
 
-  //console.log(name)
   if (openCrypto) {
     return (
       <div className="modal d-block bg-white ">
@@ -22,7 +23,7 @@ const ModalCrypto = (props) => {
           <h2>{`${filter.id} - ${filter.name} Rank : ${filter.rank}`}</h2>
         </div>
         <button onClick={handleBuy}>Buy</button>
-        <button onClick={sell}>Sell</button>
+        <button onClick={handleSell}>Sell</button>
         <button className="btn btn-info" onClick={handleClick}>close ModalCrypto</button>
       </div>
     )
