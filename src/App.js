@@ -11,6 +11,9 @@ function App() {
   const [openCrypto, setOpenCrypto] = useState(false)
   const [user, setUser] = useState([])
 
+  console.log('user')
+  console.log(user)
+
 
   return (
     <div className="App">
